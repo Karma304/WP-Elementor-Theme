@@ -4,7 +4,7 @@
   "type": "page",
   "content": [
     {
-      "id": "hero-section",
+      "id": "01-hero",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -124,7 +124,7 @@
       ]
     },
     {
-      "id": "pain-points-section",
+      "id": "03-pain-points",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -256,7 +256,7 @@
       ]
     },
     {
-      "id": "solution-section",
+      "id": "04-solution",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -327,7 +327,7 @@
       ]
     },
     {
-      "id": "features-section",
+      "id": "05-features-row-1",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -443,7 +443,7 @@
       ]
     },
     {
-      "id": "features-section-2",
+      "id": "06-features-row-2",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -559,7 +559,7 @@
       ]
     },
     {
-      "id": "roi-section",
+      "id": "11-roi-header",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -616,7 +616,7 @@
       ]
     },
     {
-      "id": "roi-stats-section",
+      "id": "12-roi-counters",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -756,7 +756,7 @@
       ]
     },
     {
-      "id": "testimonials-section",
+      "id": "15-testimonials-header",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -808,7 +808,7 @@
       ]
     },
     {
-      "id": "testimonials-cards-section",
+      "id": "16-testimonials-cards",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -969,7 +969,7 @@
       ]
     },
     {
-      "id": "social-proof-section",
+      "id": "17-social-proof-header",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -1022,7 +1022,7 @@
       ]
     },
     {
-      "id": "social-proof-stats-section",
+      "id": "18-social-proof-stats",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -1157,7 +1157,7 @@
       ]
     },
     {
-      "id": "trust-badges-section",
+      "id": "19-trust-badges",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -1218,7 +1218,7 @@
       ]
     },
     {
-      "id": "integrations-section",
+      "id": "22-integrations-header",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -1289,7 +1289,7 @@
       ]
     },
     {
-      "id": "integrations-list-section",
+      "id": "23-integrations-list",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -1416,7 +1416,7 @@
       ]
     },
     {
-      "id": "tech-benefits-section",
+      "id": "24-tech-benefits",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -1559,7 +1559,7 @@
       ]
     },
     {
-      "id": "logo-carousel-section",
+      "id": "02-logo-carousel",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -1620,7 +1620,7 @@
       ]
     },
     {
-      "id": "pricing-section",
+      "id": "07-pricing-header",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -1677,7 +1677,7 @@
       ]
     },
     {
-      "id": "pricing-row-section",
+      "id": "08-pricing-tiers",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -2169,7 +2169,7 @@
       ]
     },
     {
-      "id": "comparison-section",
+      "id": "09-comparison-table",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -2230,7 +2230,7 @@
       ]
     },
     {
-      "id": "progress-section",
+      "id": "10-progress-metrics",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -2291,7 +2291,7 @@
       ]
     },
     {
-      "id": "tabs-section",
+      "id": "13-features-tabs",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -2381,7 +2381,7 @@
       ]
     },
     {
-      "id": "rating-section",
+      "id": "14-ratings-reviews",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -2442,7 +2442,7 @@
       ]
     },
     {
-      "id": "video-section",
+      "id": "20-video-demo",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -2547,779 +2547,7 @@
       ]
     },
     {
-      "id": "comparison-section",
-      "elType": "section",
-      "settings": {
-        "layout": "boxed",
-        "content_width": {
-          "unit": "px",
-          "size": 1200
-        },
-        "gap": "default",
-        "background_background": "classic",
-        "background_color": "#f8f9fa",
-        "padding": {
-          "unit": "px",
-          "top": 80,
-          "right": 20,
-          "bottom": 80,
-          "left": 20
-        }
-      },
-      "elements": [
-        {
-          "id": "comparison-column",
-          "elType": "column",
-          "settings": {
-            "_column_size": 100
-          },
-          "elements": [
-            {
-              "id": "comparison-heading",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-                "title": "Warum MoinLog die bessere Wahl ist",
-                "header_size": "h2",
-                "align": "center",
-                "title_color": "#1a1a2e",
-                "typography_typography": "custom",
-                "typography_font_size": {
-                  "unit": "px",
-                  "size": 36
-                },
-                "typography_font_weight": "700",
-                "_margin": {
-                  "unit": "px",
-                  "bottom": 50
-                }
-              }
-            },
-            {
-              "id": "comparison-table",
-              "elType": "widget",
-              "widgetType": "text-editor",
-              "settings": {
-                "editor": "<table style='width: 100%; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);'><thead><tr style='background: #1a1a2e; color: white;'><th style='padding: 20px; text-align: left; font-size: 16px;'>Feature</th><th style='padding: 20px; text-align: center; font-size: 16px;'>MoinLog</th><th style='padding: 20px; text-align: center; font-size: 16px;'>Wettbewerber A</th><th style='padding: 20px; text-align: center; font-size: 16px;'>Wettbewerber B</th></tr></thead><tbody><tr style='border-bottom: 1px solid #e0e0e0;'><td style='padding: 15px;'>Cloud-basiert</td><td style='padding: 15px; text-align: center; color: #16c79a;'>✓</td><td style='padding: 15px; text-align: center; color: #16c79a;'>✓</td><td style='padding: 15px; text-align: center; color: #e74c3c;'>✗</td></tr><tr style='background: #f8f9fa; border-bottom: 1px solid #e0e0e0;'><td style='padding: 15px;'>Echtzeit-Analytics</td><td style='padding: 15px; text-align: center; color: #16c79a;'>✓</td><td style='padding: 15px; text-align: center; color: #e74c3c;'>✗</td><td style='padding: 15px; text-align: center; color: #16c79a;'>✓</td></tr><tr style='border-bottom: 1px solid #e0e0e0;'><td style='padding: 15px;'>Mobile App</td><td style='padding: 15px; text-align: center; color: #16c79a;'>✓</td><td style='padding: 15px; text-align: center; color: #16c79a;'>✓</td><td style='padding: 15px; text-align: center; color: #16c79a;'>✓</td></tr><tr style='background: #f8f9fa; border-bottom: 1px solid #e0e0e0;'><td style='padding: 15px;'>API-Integration</td><td style='padding: 15px; text-align: center; color: #16c79a;'>✓</td><td style='padding: 15px; text-align: center; color: #e74c3c;'>✗</td><td style='padding: 15px; text-align: center; color: #16c79a;'>✓</td></tr><tr style='border-bottom: 1px solid #e0e0e0;'><td style='padding: 15px;'>24/7 Support</td><td style='padding: 15px; text-align: center; color: #16c79a;'>✓</td><td style='padding: 15px; text-align: center; color: #e74c3c;'>✗</td><td style='padding: 15px; text-align: center; color: #e74c3c;'>✗</td></tr><tr style='background: #f8f9fa;'><td style='padding: 15px;'>DSGVO-konform</td><td style='padding: 15px; text-align: center; color: #16c79a;'>✓</td><td style='padding: 15px; text-align: center; color: #16c79a;'>✓</td><td style='padding: 15px; text-align: center; color: #16c79a;'>✓</td></tr></tbody></table>"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "progress-section",
-      "elType": "section",
-      "settings": {
-        "layout": "boxed",
-        "content_width": {
-          "unit": "px",
-          "size": 1200
-        },
-        "gap": "default",
-        "background_background": "classic",
-        "background_color": "#ffffff",
-        "padding": {
-          "unit": "px",
-          "top": 80,
-          "right": 20,
-          "bottom": 80,
-          "left": 20
-        }
-      },
-      "elements": [
-        {
-          "id": "progress-column",
-          "elType": "column",
-          "settings": {
-            "_column_size": 100
-          },
-          "elements": [
-            {
-              "id": "progress-heading",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-                "title": "Unsere Performance-Metriken",
-                "header_size": "h2",
-                "align": "center",
-                "title_color": "#1a1a2e",
-                "typography_typography": "custom",
-                "typography_font_size": {
-                  "unit": "px",
-                  "size": 36
-                },
-                "typography_font_weight": "700",
-                "_margin": {
-                  "unit": "px",
-                  "bottom": 50
-                }
-              }
-            },
-            {
-              "id": "progress-bars",
-              "elType": "widget",
-              "widgetType": "text-editor",
-              "settings": {
-                "editor": "<div style='max-width: 800px; margin: 0 auto;'><div style='margin-bottom: 30px;'><div style='display: flex; justify-content: space-between; margin-bottom: 10px;'><span style='color: #1a1a2e; font-weight: 600;'>Kundenzufriedenheit</span><span style='color: #16c79a; font-weight: 600;'>98%</span></div><div style='background: #e0e0e0; height: 10px; border-radius: 5px; overflow: hidden;'><div style='background: linear-gradient(90deg, #16c79a, #11a87e); height: 100%; width: 98%; transition: width 1s ease;'></div></div></div><div style='margin-bottom: 30px;'><div style='display: flex; justify-content: space-between; margin-bottom: 10px;'><span style='color: #1a1a2e; font-weight: 600;'>System-Verfügbarkeit</span><span style='color: #16c79a; font-weight: 600;'>99.9%</span></div><div style='background: #e0e0e0; height: 10px; border-radius: 5px; overflow: hidden;'><div style='background: linear-gradient(90deg, #16c79a, #11a87e); height: 100%; width: 99.9%; transition: width 1s ease;'></div></div></div><div style='margin-bottom: 30px;'><div style='display: flex; justify-content: space-between; margin-bottom: 10px;'><span style='color: #1a1a2e; font-weight: 600;'>Effizienzsteigerung</span><span style='color: #16c79a; font-weight: 600;'>85%</span></div><div style='background: #e0e0e0; height: 10px; border-radius: 5px; overflow: hidden;'><div style='background: linear-gradient(90deg, #16c79a, #11a87e); height: 100%; width: 85%; transition: width 1s ease;'></div></div></div><div style='margin-bottom: 30px;'><div style='display: flex; justify-content: space-between; margin-bottom: 10px;'><span style='color: #1a1a2e; font-weight: 600;'>ROI nach 12 Monaten</span><span style='color: #16c79a; font-weight: 600;'>92%</span></div><div style='background: #e0e0e0; height: 10px; border-radius: 5px; overflow: hidden;'><div style='background: linear-gradient(90deg, #16c79a, #11a87e); height: 100%; width: 92%; transition: width 1s ease;'></div></div></div></div>"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "tabs-section",
-      "elType": "section",
-      "settings": {
-        "layout": "boxed",
-        "content_width": {
-          "unit": "px",
-          "size": 1200
-        },
-        "gap": "default",
-        "background_background": "classic",
-        "background_color": "#f8f9fa",
-        "padding": {
-          "unit": "px",
-          "top": 80,
-          "right": 20,
-          "bottom": 80,
-          "left": 20
-        }
-      },
-      "elements": [
-        {
-          "id": "tabs-column",
-          "elType": "column",
-          "settings": {
-            "_column_size": 100
-          },
-          "elements": [
-            {
-              "id": "tabs-heading",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-                "title": "Leistungsstarke Features für jeden Bereich",
-                "header_size": "h2",
-                "align": "center",
-                "title_color": "#1a1a2e",
-                "typography_typography": "custom",
-                "typography_font_size": {
-                  "unit": "px",
-                  "size": 36
-                },
-                "typography_font_weight": "700",
-                "_margin": {
-                  "unit": "px",
-                  "bottom": 50
-                }
-              }
-            },
-            {
-              "id": "tabs-widget",
-              "elType": "widget",
-              "widgetType": "tabs",
-              "settings": {
-                "tabs": [
-                  {
-                    "tab_title": "Lagerverwaltung",
-                    "tab_content": "<h3 style='color: #1a1a2e; margin-bottom: 20px;'>Intelligente Lagerverwaltung</h3><ul style='color: #555555; line-height: 1.8;'><li>✓ Echtzeit-Bestandsverfolgung</li><li>✓ Automatische Nachbestellung</li><li>✓ Multi-Warehouse-Management</li><li>✓ Barcode & QR-Code Scanning</li><li>✓ Chargen- und Seriennummernverwaltung</li></ul>"
-                  },
-                  {
-                    "tab_title": "Reporting & Analytics",
-                    "tab_content": "<h3 style='color: #1a1a2e; margin-bottom: 20px;'>Datengetriebene Entscheidungen</h3><ul style='color: #555555; line-height: 1.8;'><li>✓ Anpassbare Dashboards</li><li>✓ Echtzeit-Analysen</li><li>✓ Prognose-Tools</li><li>✓ KPI-Tracking</li><li>✓ Export in alle gängigen Formate</li></ul>"
-                  },
-                  {
-                    "tab_title": "Integrationen",
-                    "tab_content": "<h3 style='color: #1a1a2e; margin-bottom: 20px;'>Nahtlose Systemintegration</h3><ul style='color: #555555; line-height: 1.8;'><li>✓ ERP-Systeme (SAP, Oracle, etc.)</li><li>✓ E-Commerce-Plattformen</li><li>✓ Versanddienstleister</li><li>✓ Buchhaltungssoftware</li><li>✓ REST API für Custom-Integrationen</li></ul>"
-                  },
-                  {
-                    "tab_title": "Mobile & Cloud",
-                    "tab_content": "<h3 style='color: #1a1a2e; margin-bottom: 20px;'>Überall verfügbar</h3><ul style='color: #555555; line-height: 1.8;'><li>✓ Native iOS & Android Apps</li><li>✓ Offline-Modus verfügbar</li><li>✓ Cloud-basiert & skalierbar</li><li>✓ Automatische Backups</li><li>✓ 99.9% Uptime-Garantie</li></ul>"
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "video-section",
-      "elType": "section",
-      "settings": {
-        "layout": "boxed",
-        "content_width": {
-          "unit": "px",
-          "size": 1200
-        },
-        "gap": "default",
-        "background_background": "gradient",
-        "background_color": "#0f3460",
-        "background_color_b": "#1a1a2e",
-        "background_gradient_angle": {
-          "unit": "deg",
-          "size": 135
-        },
-        "padding": {
-          "unit": "px",
-          "top": 80,
-          "right": 20,
-          "bottom": 80,
-          "left": 20
-        }
-      },
-      "elements": [
-        {
-          "id": "video-column",
-          "elType": "column",
-          "settings": {
-            "_column_size": 100
-          },
-          "elements": [
-            {
-              "id": "video-heading",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-                "title": "Sehen Sie MoinLog in Aktion",
-                "header_size": "h2",
-                "align": "center",
-                "title_color": "#ffffff",
-                "typography_typography": "custom",
-                "typography_font_size": {
-                  "unit": "px",
-                  "size": 36
-                },
-                "typography_font_weight": "700",
-                "_margin": {
-                  "unit": "px",
-                  "bottom": 40
-                }
-              }
-            },
-            {
-              "id": "video-placeholder",
-              "elType": "widget",
-              "widgetType": "text-editor",
-              "settings": {
-                "editor": "<div style='background: rgba(255,255,255,0.1); border: 2px dashed #16c79a; border-radius: 10px; padding: 100px 40px; text-align: center;'><p style='color: #ffffff; font-size: 18px; margin-bottom: 20px;'>🎬 Video-Widget hier einfügen</p><p style='color: #e0e0e0; font-size: 14px;'>Fügen Sie Ihr Produkt-Demo-Video ein:<br/>YouTube, Vimeo oder selbst gehostet</p></div>"
-              }
-            },
-            {
-              "id": "video-cta",
-              "elType": "widget",
-              "widgetType": "button",
-              "settings": {
-                "text": "Live-Demo buchen",
-                "align": "center",
-                "button_text_color": "#1a1a2e",
-                "background_color": "#16c79a",
-                "border_radius": {
-                  "unit": "px",
-                  "top": 5,
-                  "right": 5,
-                  "bottom": 5,
-                  "left": 5
-                },
-                "_padding": {
-                  "unit": "px",
-                  "top": 15,
-                  "right": 40,
-                  "bottom": 15,
-                  "left": 40
-                },
-                "_margin": {
-                  "unit": "px",
-                  "top": 40
-                }
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "logo-carousel-section",
-      "elType": "section",
-      "settings": {
-        "layout": "boxed",
-        "content_width": {
-          "unit": "px",
-          "size": 1200
-        },
-        "gap": "default",
-        "background_background": "classic",
-        "background_color": "#ffffff",
-        "padding": {
-          "unit": "px",
-          "top": 60,
-          "right": 20,
-          "bottom": 60,
-          "left": 20
-        }
-      },
-      "elements": [
-        {
-          "id": "logo-column",
-          "elType": "column",
-          "settings": {
-            "_column_size": 100
-          },
-          "elements": [
-            {
-              "id": "logo-heading",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-                "title": "Vertraut von führenden Unternehmen",
-                "header_size": "h3",
-                "align": "center",
-                "title_color": "#888888",
-                "typography_typography": "custom",
-                "typography_font_size": {
-                  "unit": "px",
-                  "size": 18
-                },
-                "typography_font_weight": "500",
-                "_margin": {
-                  "unit": "px",
-                  "bottom": 40
-                }
-              }
-            },
-            {
-              "id": "logo-grid",
-              "elType": "widget",
-              "widgetType": "text-editor",
-              "settings": {
-                "editor": "<div style='display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 40px;'><div style='color: #555555; font-size: 28px; font-weight: 700; opacity: 0.6;'>BMW</div><div style='color: #555555; font-size: 28px; font-weight: 700; opacity: 0.6;'>SIEMENS</div><div style='color: #555555; font-size: 28px; font-weight: 700; opacity: 0.6;'>BOSCH</div><div style='color: #555555; font-size: 28px; font-weight: 700; opacity: 0.6;'>MERCEDES</div><div style='color: #555555; font-size: 28px; font-weight: 700; opacity: 0.6;'>SAP</div></div>"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "pricing-section",
-      "elType": "section",
-      "settings": {
-        "layout": "boxed",
-        "content_width": {
-          "unit": "px",
-          "size": 1200
-        },
-        "gap": "default",
-        "background_background": "classic",
-        "background_color": "#ffffff",
-        "padding": {
-          "unit": "px",
-          "top": 80,
-          "right": 20,
-          "bottom": 80,
-          "left": 20
-        }
-      },
-      "elements": [
-        {
-          "id": "pricing-column",
-          "elType": "column",
-          "settings": {
-            "_column_size": 100
-          },
-          "elements": [
-            {
-              "id": "pricing-heading",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-                "title": "Transparente Preise für jede Unternehmensgröße",
-                "header_size": "h2",
-                "align": "center",
-                "title_color": "#1a1a2e",
-                "typography_typography": "custom",
-                "typography_font_size": {
-                  "unit": "px",
-                  "size": 36
-                },
-                "typography_font_weight": "700"
-              }
-            },
-            {
-              "id": "pricing-subtitle",
-              "elType": "widget",
-              "widgetType": "text-editor",
-              "settings": {
-                "editor": "<p style='text-align: center; color: #555555; font-size: 18px; margin-bottom: 50px;'>Wählen Sie das passende Paket für Ihr Unternehmen. Jederzeit kündbar, ohne versteckte Kosten.</p>"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "pricing-row-section",
-      "elType": "section",
-      "settings": {
-        "layout": "boxed",
-        "content_width": {
-          "unit": "px",
-          "size": 1200
-        },
-        "gap": "default",
-        "background_background": "classic",
-        "background_color": "#f8f9fa",
-        "padding": {
-          "unit": "px",
-          "top": 60,
-          "right": 20,
-          "bottom": 80,
-          "left": 20
-        }
-      },
-      "elements": [
-        {
-          "id": "pricing-tier-1",
-          "elType": "column",
-          "settings": {
-            "_column_size": 33.333
-          },
-          "elements": [
-            {
-              "id": "pricing-card-heading-1",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-                "title": "Starter",
-                "header_size": "h3",
-                "align": "center",
-                "title_color": "#1a1a2e",
-                "_margin": {
-                  "unit": "px",
-                  "bottom": 20
-                }
-              }
-            },
-            {
-              "id": "pricing-price-1",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-                "title": "€49",
-                "header_size": "h2",
-                "align": "center",
-                "title_color": "#16c79a",
-                "typography_typography": "custom",
-                "typography_font_size": {
-                  "unit": "px",
-                  "size": 48
-                },
-                "typography_font_weight": "700",
-                "_margin": {
-                  "unit": "px",
-                  "bottom": 30
-                }
-              }
-            },
-            {
-              "id": "pricing-features-1",
-              "elType": "widget",
-              "widgetType": "text-editor",
-              "settings": {
-                "editor": "<ul style='list-style: none; padding: 0; margin-bottom: 30px;'><li style='margin-bottom: 10px; color: #555;'>✓ Bis zu 5 Benutzer</li><li style='margin-bottom: 10px; color: #555;'>✓ 1.000 Lagerbewegungen/Monat</li><li style='margin-bottom: 10px; color: #555;'>✓ E-Mail Support</li><li style='margin-bottom: 10px; color: #555;'>✓ Basis-Berichte</li><li style='margin-bottom: 10px; color: #555;'>✓ Mobile App</li></ul>",
-                "_padding": {
-                  "unit": "px",
-                  "top": 20,
-                  "right": 20,
-                  "bottom": 20,
-                  "left": 20
-                },
-                "_background_background": "classic",
-                "_background_color": "#ffffff",
-                "_border_border": "solid",
-                "_border_width": {
-                  "unit": "px",
-                  "top": 1,
-                  "right": 1,
-                  "bottom": 1,
-                  "left": 1
-                },
-                "_border_color": "#e0e0e0",
-                "_border_radius": {
-                  "unit": "px",
-                  "top": 10,
-                  "right": 10,
-                  "bottom": 10,
-                  "left": 10
-                }
-              }
-            },
-            {
-              "id": "pricing-button-1",
-              "elType": "widget",
-              "widgetType": "button",
-              "settings": {
-                "text": "Jetzt starten",
-                "align": "center",
-                "button_text_color": "#16c79a",
-                "background_color": "#ffffff",
-                "border_border": "solid",
-                "border_width": {
-                  "unit": "px",
-                  "top": 2,
-                  "right": 2,
-                  "bottom": 2,
-                  "left": 2
-                },
-                "border_color": "#16c79a",
-                "border_radius": {
-                  "unit": "px",
-                  "top": 5,
-                  "right": 5,
-                  "bottom": 5,
-                  "left": 5
-                },
-                "_padding": {
-                  "unit": "px",
-                  "top": 15,
-                  "right": 40,
-                  "bottom": 15,
-                  "left": 40
-                }
-              }
-            }
-          ]
-        },
-        {
-          "id": "pricing-tier-2",
-          "elType": "column",
-          "settings": {
-            "_column_size": 33.333
-          },
-          "elements": [
-            {
-              "id": "pricing-card-heading-2",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-                "title": "Professional",
-                "header_size": "h3",
-                "align": "center",
-                "title_color": "#1a1a2e",
-                "_margin": {
-                  "unit": "px",
-                  "bottom": 20
-                }
-              }
-            },
-            {
-              "id": "pricing-price-2",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-                "title": "€149",
-                "header_size": "h2",
-                "align": "center",
-                "title_color": "#16c79a",
-                "typography_typography": "custom",
-                "typography_font_size": {
-                  "unit": "px",
-                  "size": 48
-                },
-                "typography_font_weight": "700",
-                "_margin": {
-                  "unit": "px",
-                  "bottom": 30
-                }
-              }
-            },
-            {
-              "id": "pricing-features-2",
-              "elType": "widget",
-              "widgetType": "text-editor",
-              "settings": {
-                "editor": "<ul style='list-style: none; padding: 0; margin-bottom: 30px;'><li style='margin-bottom: 10px; color: #555;'>✓ Bis zu 20 Benutzer</li><li style='margin-bottom: 10px; color: #555;'>✓ 10.000 Lagerbewegungen/Monat</li><li style='margin-bottom: 10px; color: #555;'>✓ Priority Support 24/7</li><li style='margin-bottom: 10px; color: #555;'>✓ Erweiterte Berichte</li><li style='margin-bottom: 10px; color: #555;'>✓ API-Zugang</li></ul>",
-                "_padding": {
-                  "unit": "px",
-                  "top": 20,
-                  "right": 20,
-                  "bottom": 20,
-                  "left": 20
-                },
-                "_background_background": "classic",
-                "_background_color": "#ffffff",
-                "_border_border": "solid",
-                "_border_width": {
-                  "unit": "px",
-                  "top": 2,
-                  "right": 2,
-                  "bottom": 2,
-                  "left": 2
-                },
-                "_border_color": "#16c79a",
-                "_border_radius": {
-                  "unit": "px",
-                  "top": 10,
-                  "right": 10,
-                  "bottom": 10,
-                  "left": 10
-                }
-              }
-            },
-            {
-              "id": "pricing-button-2",
-              "elType": "widget",
-              "widgetType": "button",
-              "settings": {
-                "text": "Jetzt starten",
-                "align": "center",
-                "button_text_color": "#ffffff",
-                "background_color": "#16c79a",
-                "border_border": "solid",
-                "border_width": {
-                  "unit": "px",
-                  "top": 2,
-                  "right": 2,
-                  "bottom": 2,
-                  "left": 2
-                },
-                "border_color": "#16c79a",
-                "border_radius": {
-                  "unit": "px",
-                  "top": 5,
-                  "right": 5,
-                  "bottom": 5,
-                  "left": 5
-                },
-                "_padding": {
-                  "unit": "px",
-                  "top": 15,
-                  "right": 40,
-                  "bottom": 15,
-                  "left": 40
-                }
-              }
-            }
-          ]
-        },
-        {
-          "id": "pricing-tier-3",
-          "elType": "column",
-          "settings": {
-            "_column_size": 33.333
-          },
-          "elements": [
-            {
-              "id": "pricing-card-heading-3",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-                "title": "Enterprise",
-                "header_size": "h3",
-                "align": "center",
-                "title_color": "#1a1a2e",
-                "_margin": {
-                  "unit": "px",
-                  "bottom": 20
-                }
-              }
-            },
-            {
-              "id": "pricing-price-3",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-                "title": "Individuell",
-                "header_size": "h2",
-                "align": "center",
-                "title_color": "#16c79a",
-                "typography_typography": "custom",
-                "typography_font_size": {
-                  "unit": "px",
-                  "size": 48
-                },
-                "typography_font_weight": "700",
-                "_margin": {
-                  "unit": "px",
-                  "bottom": 30
-                }
-              }
-            },
-            {
-              "id": "pricing-features-3",
-              "elType": "widget",
-              "widgetType": "text-editor",
-              "settings": {
-                "editor": "<ul style='list-style: none; padding: 0; margin-bottom: 30px;'><li style='margin-bottom: 10px; color: #555;'>✓ Unbegrenzte Benutzer</li><li style='margin-bottom: 10px; color: #555;'>✓ Unbegrenzte Lagerbewegungen</li><li style='margin-bottom: 10px; color: #555;'>✓ Account Manager</li><li style='margin-bottom: 10px; color: #555;'>✓ Custom Integrationen</li><li style='margin-bottom: 10px; color: #555;'>✓ SLA-Garantie</li></ul>",
-                "_padding": {
-                  "unit": "px",
-                  "top": 20,
-                  "right": 20,
-                  "bottom": 20,
-                  "left": 20
-                },
-                "_background_background": "classic",
-                "_background_color": "#ffffff",
-                "_border_border": "solid",
-                "_border_width": {
-                  "unit": "px",
-                  "top": 1,
-                  "right": 1,
-                  "bottom": 1,
-                  "left": 1
-                },
-                "_border_color": "#e0e0e0",
-                "_border_radius": {
-                  "unit": "px",
-                  "top": 10,
-                  "right": 10,
-                  "bottom": 10,
-                  "left": 10
-                }
-              }
-            },
-            {
-              "id": "pricing-button-3",
-              "elType": "widget",
-              "widgetType": "button",
-              "settings": {
-                "text": "Jetzt starten",
-                "align": "center",
-                "button_text_color": "#16c79a",
-                "background_color": "#ffffff",
-                "border_border": "solid",
-                "border_width": {
-                  "unit": "px",
-                  "top": 2,
-                  "right": 2,
-                  "bottom": 2,
-                  "left": 2
-                },
-                "border_color": "#16c79a",
-                "border_radius": {
-                  "unit": "px",
-                  "top": 5,
-                  "right": 5,
-                  "bottom": 5,
-                  "left": 5
-                },
-                "_padding": {
-                  "unit": "px",
-                  "top": 15,
-                  "right": 40,
-                  "bottom": 15,
-                  "left": 40
-                }
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "cta-section",
+      "id": "27-cta-final",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -3469,7 +2697,7 @@
       ]
     },
     {
-      "id": "timeline-section",
+      "id": "21-onboarding-timeline",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -3530,7 +2758,7 @@
       ]
     },
     {
-      "id": "divider-decorative",
+      "id": "25-divider",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -3584,7 +2812,7 @@
       ]
     },
     {
-      "id": "newsletter-section",
+      "id": "26-newsletter-signup",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -3676,7 +2904,7 @@
       ]
     },
     {
-      "id": "faq-section",
+      "id": "28-faq",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -3776,7 +3004,7 @@
       ]
     },
     {
-      "id": "footer-section",
+      "id": "29-footer-main",
       "elType": "section",
       "settings": {
         "layout": "boxed",
@@ -3973,7 +3201,7 @@
       ]
     },
     {
-      "id": "footer-bottom-section",
+      "id": "30-footer-bottom",
       "elType": "section",
       "settings": {
         "layout": "boxed",

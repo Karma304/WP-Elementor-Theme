@@ -82,11 +82,22 @@ WP-Elementor-Theme/
 ├── assets/
 │   └── images/                    # Platzhalter für Bilder
 ├── docs/
+│   ├── SECTION-STRUKTUR.md        # 🆕 Section-Übersicht (Header bis Footer)
 │   ├── INSTALLATION.md            # Detaillierte Installationsanleitung
 │   ├── CUSTOMIZATION.md           # Anpassungsguide
-│   └── DESIGN-SYSTEM.md           # Design-System Dokumentation
+│   ├── DESIGN-SYSTEM.md           # Design-System Dokumentation
+│   ├── ENHANCED-FEATURES.md       # v2.0 Features Guide
+│   └── V2-UPGRADE-SUMMARY.md      # Upgrade-Anleitung
 └── README.md                       # Diese Datei
 ```
+
+### 🗂️ Section-Struktur
+
+Alle 30 Sections sind jetzt mit eindeutigen, durchnummerierten IDs versehen:
+- `01-hero` bis `30-footer-bottom`
+- Klare Benennung für bessere Orientierung
+- Keine Duplikate mehr
+- Siehe [SECTION-STRUKTUR.md](docs/SECTION-STRUKTUR.md) für vollständige Übersicht
 
 ## 🎨 Farbschema
 
