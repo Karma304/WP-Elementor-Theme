@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaS Animations Demo - Modern B2B Landing Page</title>
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #1a1a2e;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: #555;
+            margin-bottom: 50px;
+            font-size: 18px;
+        }
+        
+        /* Hero Section Styles */
+        .hero-section {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section h1 {
+            font-size: 48px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        
+        .hero-section p {
+            font-size: 24px;
+            color: #e0e0e0;
+            margin-bottom: 40px;
+        }
+        
+        /* Pain Points Grid */
+        .pain-points-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .pain-point-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pain-point-icon {
+            font-size: 48px;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+        
+        .pain-point-card h3 {
+            color: #1a1a2e;
+            margin-bottom: 10px;
+        }
+        
+        /* ROI Section */
+        .roi-section {
+            background: linear-gradient(90deg, #16c79a 0%, #11a87e 100%);
+            color: white;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .metric-card {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .roi-counter {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        /* Testimonial Slider */
+        .testimonial-slider {
+            position: relative;
+            max-width: 800px;
+            margin: 50px auto;
+        }
+        
+        .testimonial-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-card p {
+            font-size: 18px;
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        
+        .customer-logo {
+            width: 120px;
+            height: auto;
+        }
+        
+        /* Integrations Grid */
+        .integrations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .integration-logo {
+            position: relative;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .integration-logo i {
+            font-size: 48px;
+            color: #16c79a;
+        }
+        
+        /* FAQ Accordion */
+        .faq-accordion {
+            max-width: 800px;
+            margin: 50px auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+        }
+        
+        .faq-question {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+        
+        .faq-answer p {
+            color: #555;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 18px 45px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: #16c79a;
+            color: #fff;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+        
+        /* Background colors for sections */
+        .bg-light {
+            background: #f8f9fa;
+        }
+        
+        .bg-white {
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section with Animations -->
+    <section class="hero-section" style="background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);">
+        <div class="parallax-bg" data-speed="0.5" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <h1 class="hero-headline">Skalieren Sie Ihr Geschäft mit modernster Technologie</h1>
+            <p class="hero-subtitle">Weniger Stress, mehr Effizienz: Unsere Lösung transformiert Ihr Business</p>
+            <button class="btn btn-primary cta-button pulse-button" data-confetti="true">
+                Kostenlos testen
+            </button>
+            <button class="btn btn-secondary cta-button" style="margin-left: 15px;">
+                Demo ansehen
+            </button>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="bg-light">
+        <div class="container">
+            <h2>Die Herausforderungen kennen wir</h2>
+            <p class="section-subtitle">Diese Probleme lösen wir für Sie</p>
+            
+            <div class="pain-points-grid">
+                <div class="pain-point-card scroll-reveal">
+                    <i class="pain-point-icon fas fa-exclamation-triangle"></i>
+                    <h3>Hohe Fehlerquote</h3>
+                    <p>Manuelle Prozesse führen zu kostspieligen Fehlern und Verzögerungen</p>
+                </div>
+                
+                <div class="pain-point-card scroll-reveal">
+                    <i class="pain-point-icon fas fa-clock"></i>
+                    <h3>Zeitverschwendung</h3>
+                    <p>Ineffiziente Abläufe kosten wertvolle Zeit und Ressourcen</p>
+                </div>
+                
+                <div class="pain-point-card scroll-reveal">
+                    <i class="pain-point-icon fas fa-search"></i>
+                    <h3>Fehlende Transparenz</h3>
+                    <p>Keine Echtzeit-Übersicht über wichtige Geschäftsprozesse</p>
+                </div>
+                
+                <div class="pain-point-card scroll-reveal">
+                    <i class="pain-point-icon fas fa-chart-line"></i>
+                    <h3>Begrenztes Wachstum</h3>
+                    <p>Veraltete Systeme bremsen Ihre Skalierungsmöglichkeiten aus</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI & Metrics Section -->
+    <section class="roi-section">
+        <div class="container">
+            <h2 style="color: white;">Messbare Erfolge</h2>
+            <p class="section-subtitle" style="color: #e0e0e0;">Diese Ergebnisse erzielen unsere Kunden</p>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="roi-counter counter-animate" data-target="150" data-suffix="%" data-duration="2000">0</div>
+                    <p>Effizienzsteigerung</p>
+                    <div style="background: rgba(255,255,255,0.3); height: 4px; border-radius: 2px; margin-top: 15px; overflow: hidden;">
+                        <div class="metric-progress" style="--progress-value: 100%;"></div>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="roi-counter counter-animate" data-target="40" data-suffix="%" data-duration="2000">0</div>
+                    <p>Weniger Fehler</p>
+                    <div style="background: rgba(255,255,255,0.3); height: 4px; border-radius: 2px; margin-top: 15px; overflow: hidden;">
+                        <div class="metric-progress" style="--progress-value: 85%;"></div>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="roi-counter counter-animate" data-target="20" data-suffix="%" data-duration="2000">0</div>
+                    <p>Kosteneinsparung</p>
+                    <div style="background: rgba(255,255,255,0.3); height: 4px; border-radius: 2px; margin-top: 15px; overflow: hidden;">
+                        <div class="metric-progress" style="--progress-value: 75%;"></div>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="roi-counter counter-animate" data-target="95" data-suffix="%" data-duration="2000">0</div>
+                    <p>Kundenzufriedenheit</p>
+                    <div style="background: rgba(255,255,255,0.3); height: 4px; border-radius: 2px; margin-top: 15px; overflow: hidden;">
+                        <div class="metric-progress" style="--progress-value: 95%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="bg-white">
+        <div class="container">
+            <h2>Was unsere Kunden sagen</h2>
+            <p class="section-subtitle">Über 1.000 zufriedene Unternehmen weltweit</p>
+            
+            <div class="testimonial-slider" data-duration="6000">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-card">
+                        <p>"Die beste Entscheidung für unser Unternehmen. Die Effizienz hat sich verdreifacht und unsere Fehlerquote ist auf nahezu Null gesunken."</p>
+                        <strong style="color: #1a1a2e;">Thomas Müller</strong><br>
+                        <span style="color: #16c79a;">CEO, TechCorp GmbH</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <p>"Unglaublich benutzerfreundlich und leistungsstark. Der Support ist erstklassig und die Implementierung war ein Kinderspiel."</p>
+                        <strong style="color: #1a1a2e;">Sarah Schmidt</strong><br>
+                        <span style="color: #16c79a;">Operations Director, LogisticsPro</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <p>"ROI innerhalb von 6 Monaten erreicht. Die Automatisierung hat unser Geschäft komplett transformiert."</p>
+                        <strong style="color: #1a1a2e;">Michael Weber</strong><br>
+                        <span style="color: #16c79a;">CTO, InnovateNow AG</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integrations Section -->
+    <section class="bg-light">
+        <div class="container">
+            <h2>Nahtlose Integrationen</h2>
+            <p class="section-subtitle">Verbinden Sie sich mit den Tools, die Sie bereits nutzen</p>
+            
+            <div class="integrations-grid">
+                <div class="integration-logo">
+                    <i class="fas fa-database"></i>
+                    <div class="integration-tooltip">SAP Integration</div>
+                </div>
+                
+                <div class="integration-logo flip">
+                    <i class="fas fa-shopping-cart"></i>
+                    <div class="integration-tooltip">E-Commerce</div>
+                </div>
+                
+                <div class="integration-logo">
+                    <i class="fas fa-cloud"></i>
+                    <div class="integration-tooltip">Cloud Services</div>
+                </div>
+                
+                <div class="integration-logo flip">
+                    <i class="fas fa-chart-bar"></i>
+                    <div class="integration-tooltip">Analytics</div>
+                </div>
+                
+                <div class="integration-logo">
+                    <i class="fas fa-envelope"></i>
+                    <div class="integration-tooltip">Email Marketing</div>
+                </div>
+                
+                <div class="integration-logo flip">
+                    <i class="fas fa-credit-card"></i>
+                    <div class="integration-tooltip">Payment Gateways</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="bg-white">
+        <div class="container">
+            <h2>Häufig gestellte Fragen</h2>
+            <p class="section-subtitle">Alles, was Sie wissen müssen</p>
+            
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Wie lange dauert die Implementierung?</span>
+                        <i class="faq-icon fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Die Implementierung dauert in der Regel 2-4 Wochen, abhängig von der Größe Ihres Unternehmens und den gewünschten Integrationen. Unser Team unterstützt Sie bei jedem Schritt.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Benötige ich technisches Know-how?</span>
+                        <i class="faq-icon fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nein, unsere Plattform ist so konzipiert, dass sie auch ohne technische Kenntnisse einfach zu bedienen ist. Wir bieten umfassende Schulungen und Support.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Gibt es eine kostenlose Testversion?</span>
+                        <i class="faq-icon fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ja, Sie können unsere Lösung 30 Tage lang kostenlos testen. Keine Kreditkarte erforderlich.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky CTA Bar -->
+    <div class="sticky-cta-bar">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="color: white; font-size: 18px; font-weight: 600;">
+                Bereit loszulegen? Starten Sie noch heute!
+            </div>
+            <button class="btn btn-primary gradient-button pulse-button" data-confetti="true">
+                Kostenlos testen
+            </button>
+        </div>
+    </div>
+
+    <!-- Load Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/elementor-integration.js"></script>
+    
+    <script>
+        // Demo-specific enhancements
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('%c✨ SaaS Animations Demo Loaded', 'color: #16c79a; font-size: 16px; font-weight: bold;');
+            console.log('%cTry scrolling, hovering, and clicking to see the animations!', 'color: #555; font-size: 14px;');
+        });
+    </script>
+</body>
+</html>

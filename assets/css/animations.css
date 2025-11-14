@@ -1,0 +1,713 @@
+/**
+ * Modern Conversion-Optimized Animations for B2B SaaS Landing Page
+ * Version: 1.0.0
+ * 
+ * Features:
+ * - Hardware-accelerated CSS3 transforms and transitions
+ * - Scroll-triggered animations
+ * - Reduced-motion support
+ * - Performance-optimized with GPU acceleration
+ */
+
+/* ============================================
+   BASE ANIMATION SETUP
+   ============================================ */
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Performance Optimization */
+.will-animate {
+  will-change: transform, opacity;
+}
+
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* ============================================
+   HERO SECTION ANIMATIONS
+   ============================================ */
+
+/* Hero Headline Fade-in */
+.hero-headline {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out 0.8s forwards;
+}
+
+/* Hero Subtitle Fade-in */
+.hero-subtitle {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out 1.2s forwards;
+}
+
+/* CTA Button Hover Effect */
+.cta-button {
+  position: relative;
+  transition: all 0.3s ease;
+  transform: translateZ(0);
+  will-change: transform, box-shadow;
+}
+
+.cta-button:hover {
+  transform: scale(1.05) translateZ(0);
+  box-shadow: 0 10px 30px rgba(22, 199, 154, 0.4);
+}
+
+.cta-button:active {
+  transform: scale(0.98) translateZ(0);
+}
+
+/* Parallax Background */
+.parallax-bg {
+  will-change: transform;
+  transition: transform 0.3s ease-out;
+}
+
+/* 3D Tilt Effect for Hero Graphics */
+.hero-graphic-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-out;
+  will-change: transform;
+}
+
+.hero-graphic-3d:hover {
+  transform: perspective(1000px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+}
+
+/* ============================================
+   PAIN POINTS GRID ANIMATIONS
+   ============================================ */
+
+/* Base state for pain points */
+.pain-point-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.4s ease, transform 0.3s ease;
+  will-change: transform, opacity, box-shadow;
+}
+
+/* Scroll-triggered animation */
+.pain-point-card.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger effect - apply delays */
+.pain-point-card:nth-child(1) { animation-delay: 0s; transition-delay: 0s; }
+.pain-point-card:nth-child(2) { animation-delay: 0.15s; transition-delay: 0.15s; }
+.pain-point-card:nth-child(3) { animation-delay: 0.3s; transition-delay: 0.3s; }
+.pain-point-card:nth-child(4) { animation-delay: 0.45s; transition-delay: 0.45s; }
+.pain-point-card:nth-child(5) { animation-delay: 0.6s; transition-delay: 0.6s; }
+.pain-point-card:nth-child(6) { animation-delay: 0.75s; transition-delay: 0.75s; }
+
+/* Hover lift effect */
+.pain-point-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon rotation on hover */
+.pain-point-card:hover .pain-point-icon {
+  animation: iconPulse 0.6s ease-in-out;
+}
+
+/* ============================================
+   FEATURE CAROUSEL/SLIDER
+   ============================================ */
+
+.feature-slider {
+  position: relative;
+  overflow: hidden;
+  touch-action: pan-y pinch-zoom;
+}
+
+.feature-slide {
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out, scale 0.6s ease-in-out;
+  will-change: transform, opacity;
+  transform: scale(0.9);
+  opacity: 0.6;
+}
+
+.feature-slide.active {
+  transform: scale(1.05);
+  opacity: 1;
+  z-index: 10;
+}
+
+/* Progress bar animation */
+.slider-progress {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.slider-progress-bar {
+  height: 100%;
+  background: #16c79a;
+  width: 0%;
+  animation: progressAnimation var(--slide-duration, 5s) linear;
+  transform: translateZ(0);
+}
+
+/* Auto-play pause on hover */
+.feature-slider:hover .slider-progress-bar {
+  animation-play-state: paused;
+}
+
+/* ============================================
+   ROI & METRICS ANIMATIONS
+   ============================================ */
+
+/* Counter animation */
+.roi-counter {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.roi-counter.animated {
+  opacity: 1;
+  transform: scale(1);
+  animation: scaleIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Progress bar with easing */
+.metric-progress {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #16c79a 0%, #11a87e 100%);
+  transition: width 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: translateZ(0);
+}
+
+.metric-progress.animated {
+  width: var(--progress-value, 0%);
+}
+
+/* Metric card hover effect */
+.metric-card {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.metric-card:hover {
+  box-shadow: 0 0 30px rgba(22, 199, 154, 0.3);
+  border-color: #16c79a;
+}
+
+.metric-card:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, transparent 0%, rgba(22, 199, 154, 0.1) 100%);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* ============================================
+   TESTIMONIAL SECTION
+   ============================================ */
+
+/* Testimonial slider with fade transition */
+.testimonial-slider {
+  position: relative;
+}
+
+.testimonial-slide {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.testimonial-slide.active {
+  opacity: 1;
+  position: relative;
+}
+
+/* Testimonial card hover */
+.testimonial-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: translateZ(0);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px) translateZ(0);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Customer logo grayscale to color */
+.customer-logo {
+  filter: grayscale(100%);
+  transition: filter 0.4s ease;
+  opacity: 0.7;
+}
+
+.customer-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Subtle particle effect */
+.particle-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(22, 199, 154, 0.6);
+  border-radius: 50%;
+  animation: floatParticle 20s infinite ease-in-out;
+}
+
+/* ============================================
+   CASE STUDY WIDGET (Before/After)
+   ============================================ */
+
+/* Split-screen reveal */
+.case-study-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.case-study-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease-out;
+}
+
+.case-study-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease-out 0.3s;
+}
+
+.case-study-split.animated .case-study-left,
+.case-study-split.animated .case-study-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Image comparison slider */
+.image-comparison {
+  position: relative;
+  overflow: hidden;
+  cursor: ew-resize;
+}
+
+.comparison-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #16c79a;
+  cursor: ew-resize;
+  z-index: 10;
+  transition: background 0.2s ease;
+}
+
+.comparison-handle:hover {
+  background: #11a87e;
+  box-shadow: 0 0 15px rgba(22, 199, 154, 0.6);
+}
+
+/* Blur to focus effect */
+.blur-to-focus {
+  filter: blur(10px);
+  transition: filter 1s ease-out;
+}
+
+.blur-to-focus.focused {
+  filter: blur(0);
+}
+
+/* Text underline animation */
+.animated-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.animated-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #16c79a;
+  transition: width 0.4s ease-out;
+}
+
+.animated-underline:hover::after {
+  width: 100%;
+}
+
+/* ============================================
+   INTEGRATIONS GALLERY
+   ============================================ */
+
+/* Grid layout */
+.integrations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
+}
+
+/* Stagger animation for logos */
+.integration-logo {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.4s ease;
+}
+
+.integration-logo.animated {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.integration-logo:nth-child(1) { transition-delay: 0s; }
+.integration-logo:nth-child(2) { transition-delay: 0.1s; }
+.integration-logo:nth-child(3) { transition-delay: 0.2s; }
+.integration-logo:nth-child(4) { transition-delay: 0.3s; }
+.integration-logo:nth-child(5) { transition-delay: 0.4s; }
+.integration-logo:nth-child(6) { transition-delay: 0.5s; }
+.integration-logo:nth-child(7) { transition-delay: 0.6s; }
+.integration-logo:nth-child(8) { transition-delay: 0.7s; }
+
+/* Hover rotate + scale */
+.integration-logo:hover {
+  transform: rotate(360deg) scale(1.2);
+  transition-duration: 0.6s;
+}
+
+/* Alternative flip effect */
+.integration-logo.flip:hover {
+  transform: rotateY(180deg) scale(1.1);
+}
+
+/* Tooltip */
+.integration-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: #1a1a2e;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 100;
+}
+
+.integration-logo:hover .integration-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ============================================
+   FAQ ACCORDION
+   ============================================ */
+
+.faq-accordion {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-item {
+  border-bottom: 1px solid #e0e0e0;
+  transition: background 0.3s ease;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+  background: #f8f9fa;
+}
+
+.faq-icon {
+  transition: transform 0.4s ease;
+  font-size: 20px;
+  color: #16c79a;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-item.active .faq-question {
+  background: #f8f9fa;
+  border-left: 4px solid #16c79a;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), padding 0.5s ease;
+  padding: 0 20px;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  padding: 0 20px 20px 20px;
+}
+
+/* Smooth scroll to active FAQ */
+.faq-item.active {
+  scroll-margin-top: 100px;
+}
+
+/* ============================================
+   STICKY CTA BAR
+   ============================================ */
+
+.sticky-cta-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+  padding: 15px 30px;
+  transform: translateY(100%);
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: 1000;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.sticky-cta-bar.visible {
+  transform: translateY(0);
+}
+
+/* Pulsing button */
+.pulse-button {
+  animation: buttonPulse 3s infinite ease-in-out;
+  transform-origin: center;
+}
+
+/* Hover gradient transition */
+.gradient-button {
+  background: linear-gradient(135deg, #16c79a 0%, #11a87e 100%);
+  background-size: 200% 200%;
+  transition: background-position 0.6s ease, transform 0.3s ease;
+}
+
+.gradient-button:hover {
+  background-position: 100% 100%;
+  transform: scale(1.05);
+}
+
+/* Confetti effect on click */
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: #16c79a;
+  animation: confettiFall 2s ease-out forwards;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+/* ============================================
+   KEYFRAME ANIMATIONS
+   ============================================ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.1) rotate(-5deg);
+  }
+  75% {
+    transform: scale(1.1) rotate(5deg);
+  }
+}
+
+@keyframes buttonPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(22, 199, 154, 0.7);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 0 0 10px rgba(22, 199, 154, 0);
+  }
+}
+
+@keyframes progressAnimation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes floatParticle {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(50px);
+    opacity: 0;
+  }
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* Reduce animation complexity on mobile */
+  .hero-graphic-3d:hover {
+    transform: none;
+  }
+  
+  .pain-point-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .case-study-split {
+    grid-template-columns: 1fr;
+  }
+  
+  .integrations-grid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Disable complex animations on mobile for performance */
+  .particle-bg {
+    display: none;
+  }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.fade-in {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.slide-up {
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scale-in {
+  animation: scaleIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Hidden by default, shown when scrolled into view */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
