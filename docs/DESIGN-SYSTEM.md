@@ -4,47 +4,62 @@ Dieses Dokument beschreibt das vollständige Design-System des Templates für ko
 
 ## Farbpalette
 
+### Modern SaaS Color Palette (Inspired by sage.com, xentral.com, dbfakt.de)
+
 ### Primärfarben
 
 | Farbe | Hex-Code | RGB | Verwendung |
 |-------|----------|-----|------------|
-| **Dunkelblau** | `#1a1a2e` | rgb(26, 26, 46) | Überschriften, Haupttext, Footer-Hintergrund |
-| **Mittelblau** | `#0f3460` | rgb(15, 52, 96) | Gradient-Farbe, sekundäre Elemente |
-| **Türkis** | `#16c79a` | rgb(22, 199, 154) | CTAs, Icons, Akzente, positive Hervorhebungen |
+| **Deep Navy** | `#0B1F3F` | rgb(11, 31, 63) | Primary headings, nav text, footer background |
+| **Professional Blue** | `#1B4F72` | rgb(27, 79, 114) | Secondary headings, gradient base |
+| **Modern Teal** | `#00A99D` | rgb(0, 169, 157) | Primary CTAs, icons, brand accent |
+| **Vibrant Cyan** | `#00D4C9` | rgb(0, 212, 201) | Highlights, hover states, interactive elements |
 
 ### Sekundärfarben
 
 | Farbe | Hex-Code | RGB | Verwendung |
 |-------|----------|-----|------------|
-| **Türkis Dunkel** | `#11a87e` | rgb(17, 168, 126) | Hover-States für CTAs |
-| **Rot** | `#e74c3c` | rgb(231, 76, 60) | Pain Point Icons, Fehler-Meldungen |
+| **Deep Teal** | `#008C82` | rgb(0, 140, 130) | CTA hover states, active states |
+| **Professional Purple** | `#6C63FF` | rgb(108, 99, 255) | Secondary CTAs, badges, premium features |
+| **Alert Orange** | `#FF6B35` | rgb(255, 107, 53) | Warning states, attention-grabbers |
+| **Success Green** | `#00B894` | rgb(0, 184, 148) | Success messages, positive indicators |
 
 ### Neutral-Farben
 
 | Farbe | Hex-Code | RGB | Verwendung |
 |-------|----------|-----|------------|
-| **Weiß** | `#ffffff` | rgb(255, 255, 255) | Hintergrund, Text auf dunklem Grund |
-| **Hellgrau** | `#f8f9fa` | rgb(248, 249, 250) | Alternierender Sektions-Hintergrund |
-| **Mittelgrau** | `#e0e0e0` | rgb(224, 224, 224) | Rahmen, Trennlinien |
-| **Dunkelgrau** | `#555555` | rgb(85, 85, 85) | Beschreibungstext, sekundärer Text |
-| **Helltext** | `#e0e0e0` | rgb(224, 224, 224) | Text auf dunklem Hintergrund |
-| **Hellgrau Text** | `#999999` | rgb(153, 153, 153) | Copyright, Footer-Text |
+| **Pure White** | `#FFFFFF` | rgb(255, 255, 255) | Main background, card backgrounds |
+| **Light Background** | `#F7F9FC` | rgb(247, 249, 252) | Alternating sections, subtle backgrounds |
+| **Soft Gray** | `#E8ECF1` | rgb(232, 236, 241) | Borders, dividers, disabled states |
+| **Medium Gray** | `#6C757D` | rgb(108, 117, 125) | Secondary text, descriptions |
+| **Dark Text** | `#2C3E50` | rgb(44, 62, 80) | Body text, readable content |
+| **Light Text** | `#95A5A6` | rgb(149, 165, 166) | Captions, metadata, footer text |
 
 ### Gradient-Definitionen
 
-**Hero-Gradient**:
+**Hero-Gradient (Modern Professional)**:
 ```css
-background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+background: linear-gradient(135deg, #0B1F3F 0%, #1B4F72 50%, #2E86AB 100%);
 ```
 
-**ROI-Gradient**:
+**ROI-Gradient (Vibrant Teal)**:
 ```css
-background: linear-gradient(90deg, #16c79a 0%, #11a87e 100%);
+background: linear-gradient(90deg, #00A99D 0%, #00D4C9 100%);
 ```
 
-**CTA-Gradient**:
+**CTA-Gradient (Deep Professional)**:
 ```css
-background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+background: linear-gradient(135deg, #1B4F72 0%, #0B1F3F 100%);
+```
+
+**Accent-Gradient (Purple Touch)**:
+```css
+background: linear-gradient(135deg, #6C63FF 0%, #5A52D5 100%);
+```
+
+**Light-Gradient (Soft Background)**:
+```css
+background: linear-gradient(180deg, #FFFFFF 0%, #F7F9FC 100%);
 ```
 
 ## Typografie
@@ -71,18 +86,23 @@ background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
 | **Body** | Regular | 400 |
 | **Light Text** | Light | 300 |
 
-### Empfohlene Schriftarten
+### Empfohlene Schriftarten (Modern SaaS Style)
 
-**System-Schriftart-Stack** (Standard):
+**Primary Font Stack** (Modern & Professional):
 ```css
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 ```
 
-**Google Fonts Empfehlungen**:
-- **Modern & Tech**: Inter, Roboto, Poppins
-- **Professional**: Open Sans, Lato, Montserrat
-- **Elegant**: Playfair Display + Source Sans Pro
-- **Corporate**: IBM Plex Sans, Work Sans
+**Recommended Google Fonts**:
+- **Primary Choice**: **Inter** (Modern, clean, excellent readability)
+- **Alternative 1**: **Poppins** (Geometric, friendly professional)
+- **Alternative 2**: **DM Sans** (Contemporary, versatile)
+- **Alternative 3**: **Plus Jakarta Sans** (Rounded, modern)
+
+**Font Pairing Recommendations**:
+- **Headings**: Inter Bold (700) / Poppins SemiBold (600)
+- **Body**: Inter Regular (400) / DM Sans Regular (400)
+- **Accents**: Inter Medium (500) / Poppins Medium (500)
 
 ## Abstände & Layout
 
@@ -129,100 +149,190 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 
 ### Buttons
 
-#### Primärer Button
+#### Primärer Button (Modern SaaS Style)
 
 **Style**:
 ```
-Background: #16c79a
-Text Color: #ffffff
-Font Size: 18px
+Background: #00A99D (Modern Teal)
+Text Color: #FFFFFF
+Font Family: Inter / Poppins
+Font Size: 16px
 Font Weight: 600
-Padding: 18px 45px
-Border Radius: 50px (fully rounded)
+Padding: 14px 32px
+Border Radius: 8px (Modern rounded)
+Border: none
+Box Shadow: 0 2px 8px rgba(0, 169, 157, 0.2)
+Transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
 ```
 
 **Hover**:
 ```
-Background: #11a87e
+Background: #008C82 (Deep Teal)
 Transform: translateY(-2px)
-Box Shadow: 0 4px 15px rgba(22, 199, 154, 0.3)
+Box Shadow: 0 4px 16px rgba(0, 169, 157, 0.35)
 ```
 
-**States**:
-- Normal: Türkis
-- Hover: Dunkleres Türkis + Lift-Effekt
-- Active: Noch dunkler
-- Disabled: Grau, 50% Opacity
+**Active**:
+```
+Transform: translateY(0)
+Box Shadow: 0 1px 4px rgba(0, 169, 157, 0.3)
+```
 
-#### Sekundärer Button
+**Disabled**:
+```
+Background: #E8ECF1
+Color: #95A5A6
+Cursor: not-allowed
+Box Shadow: none
+```
+
+#### Sekundärer Button (Outlined Style)
 
 **Style**:
 ```
 Background: transparent
-Text Color: #ffffff (auf dunklem Grund) / #1a1a2e (auf hellem Grund)
-Border: 2px solid
-Font Size: 18px
+Text Color: #00A99D (on light) / #FFFFFF (on dark)
+Border: 2px solid #00A99D
+Font Family: Inter / Poppins
+Font Size: 16px
 Font Weight: 600
-Padding: 16px 50px
-Border Radius: 50px
+Padding: 12px 32px
+Border Radius: 8px
+Transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
 ```
 
 **Hover**:
 ```
-Background: #ffffff (invertiert)
-Text Color: #1a1a2e (invertiert)
+Background: #00A99D
+Text Color: #FFFFFF
+Border-Color: #00A99D
 Transform: translateY(-2px)
+Box Shadow: 0 4px 16px rgba(0, 169, 157, 0.25)
 ```
 
-### Icon-Boxen
+#### Tertiary Button (Ghost Style)
+
+**Style**:
+```
+Background: rgba(0, 169, 157, 0.1)
+Text Color: #00A99D
+Border: none
+Font Family: Inter / Poppins
+Font Size: 16px
+Font Weight: 600
+Padding: 12px 28px
+Border Radius: 8px
+```
+
+**Hover**:
+```
+Background: rgba(0, 169, 157, 0.15)
+Transform: translateY(-1px)
+```
+
+### Icon-Boxen (Modern Card Style)
 
 **Feature Icon-Box**:
 ```
-Icon Size: 48px
-Icon Color: #16c79a
+Icon Size: 56px
+Icon Color: #00A99D (gradient option: linear-gradient(135deg, #00A99D, #00D4C9))
+Icon Background: rgba(0, 169, 157, 0.1)
+Icon Border Radius: 12px
+Icon Padding: 16px
 Title Font Size: 20px
-Title Color: #1a1a2e
+Title Color: #0B1F3F
 Title Font Weight: 600
 Description Font Size: 16px
-Description Color: #555555
+Description Color: #6C757D
+Description Line Height: 1.6
 Alignment: Top (Icon above text)
-Spacing: 20px between icon and title
+Spacing: 24px between icon and title
+Card Background: #FFFFFF
+Card Border: 1px solid #E8ECF1
+Card Border Radius: 12px
+Card Padding: 32px
+Card Shadow: 0 2px 12px rgba(0, 0, 0, 0.06)
+Hover Shadow: 0 8px 24px rgba(0, 0, 0, 0.12)
 ```
 
 **Pain Point Icon-Box**:
 ```
-Icon Size: 36px
-Icon Color: #e74c3c
+Icon Size: 40px
+Icon Color: #FF6B35
+Icon Background: rgba(255, 107, 53, 0.1)
+Icon Border Radius: 8px
+Icon Padding: 12px
 Title Font Size: 18px
-Title Color: #1a1a2e
+Title Color: #0B1F3F
 Title Font Weight: 600
 Description Font Size: 16px
-Description Color: #555555
+Description Color: #6C757D
 Alignment: Left (Icon beside text)
-Spacing: 15px between icon and text
+Spacing: 16px between icon and text
 ```
 
-### Testimonial-Karten
-
-**Style**:
+**Integration Icon-Box**:
 ```
-Background: #ffffff
-Border: 1px solid #e0e0e0
-Border Radius: 10px
-Padding: 30px
-Shadow: 0 2px 10px rgba(0, 0, 0, 0.05)
+Icon Size: 48px
+Icon Color: #6C63FF (Professional Purple)
+Icon Background: rgba(108, 99, 255, 0.1)
+Icon Border Radius: 10px
+Icon Padding: 14px
+Hover Transform: translateY(-4px) scale(1.05)
+Transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+```
+
+### Testimonial-Karten (Modern Design)
+
+**Card Style**:
+```
+Background: #FFFFFF
+Border: 1px solid #E8ECF1
+Border Radius: 16px
+Padding: 36px
+Shadow: 0 4px 16px rgba(0, 0, 0, 0.08)
+Hover Shadow: 0 12px 32px rgba(0, 0, 0, 0.12)
+Transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+Position: relative
+Overflow: hidden
+```
+
+**Accent Bar** (Left side):
+```
+Position: absolute
+Left: 0
+Top: 0
+Bottom: 0
+Width: 4px
+Background: linear-gradient(180deg, #00A99D, #00D4C9)
 ```
 
 **Content**:
 ```
-Quote Font Size: 16px
-Quote Color: #555555
-Quote Line Height: 1.6
-Name Font Size: 18px
-Name Color: #1a1a2e
+Quote Icon Size: 32px
+Quote Icon Color: rgba(0, 169, 157, 0.2)
+Quote Font Size: 18px
+Quote Color: #2C3E50
+Quote Line Height: 1.7
+Quote Font Style: normal (not italic for modern look)
+Quote Margin Bottom: 24px
+Name Font Size: 16px
+Name Color: #0B1F3F
 Name Font Weight: 600
 Job Font Size: 14px
-Job Color: #16c79a
+Job Color: #6C757D
+Company Font Size: 14px
+Company Color: #00A99D
+Avatar Size: 56px (if used)
+Avatar Border Radius: 50%
+Avatar Border: 3px solid #E8ECF1
+```
+
+**Rating Stars** (if applicable):
+```
+Star Size: 16px
+Star Color: #FFB800
+Star Spacing: 4px
 ```
 
 ### Counter/Statistics

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern SaaS Design Showcase - WP Elementor Theme</title>
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--color-dark-text);
+            background: var(--color-pure-white);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--color-deep-navy);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+        
+        .color-card {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-smooth);
+        }
+        
+        .color-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .color-swatch {
+            height: 120px;
+        }
+        
+        .color-info {
+            padding: 16px;
+            background: var(--color-pure-white);
+        }
+        
+        .color-name {
+            font-weight: 600;
+            color: var(--color-deep-navy);
+            margin-bottom: 4px;
+        }
+        
+        .color-hex {
+            font-size: 14px;
+            color: var(--color-medium-gray);
+            font-family: 'Courier New', monospace;
+        }
+        
+        .component-showcase {
+            display: grid;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .component-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            align-items: center;
+        }
+        
+        .gradient-showcase {
+            height: 200px;
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .card-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+        
+        .sample-card {
+            background: var(--color-pure-white);
+            border: 1px solid var(--color-soft-gray);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-smooth);
+        }
+        
+        .sample-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-modern-teal);
+        }
+        
+        .icon-box {
+            width: 56px;
+            height: 56px;
+            background: rgba(0, 169, 157, 0.1);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-modern-teal);
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 40px 0;
+        }
+        
+        .comparison-side {
+            padding: 40px;
+            border-radius: var(--radius-xl);
+        }
+        
+        .old-design {
+            background: #f8f9fa;
+            border: 2px solid #e0e0e0;
+        }
+        
+        .new-design {
+            background: var(--color-light-bg);
+            border: 2px solid var(--color-soft-gray);
+        }
+        
+        .old-button {
+            background: #16c79a;
+            color: white;
+            padding: 18px 45px;
+            border-radius: 50px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .comparison-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 24px;
+        }
+        
+        .feature-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-modern-teal);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container" style="text-align: center; position: relative; z-index: 1;">
+            <h1 style="color: white; font-size: 48px; font-weight: 700; margin-bottom: 24px;">
+                Modern SaaS Design System
+            </h1>
+            <p style="color: rgba(255,255,255,0.9); font-size: 20px; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Inspired by sage.com, xentral.com, and dbfakt.de
+            </p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <button class="cta-button">Get Started</button>
+                <button class="cta-button-secondary">Learn More</button>
+                <button class="btn-purple">Premium Features</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Color Palette Section -->
+    <div class="section">
+        <div class="container">
+            <h2 class="section-title">Modern Color Palette</h2>
+            
+            <h3 style="font-size: 24px; margin-bottom: 24px; color: var(--color-deep-navy);">Primary Colors</h3>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #0B1F3F;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Deep Navy</div>
+                        <div class="color-hex">#0B1F3F</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #1B4F72;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Professional Blue</div>
+                        <div class="color-hex">#1B4F72</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #00A99D;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Modern Teal</div>
+                        <div class="color-hex">#00A99D</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #00D4C9;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Vibrant Cyan</div>
+                        <div class="color-hex">#00D4C9</div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 style="font-size: 24px; margin-bottom: 24px; color: var(--color-deep-navy);">Secondary Colors</h3>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #6C63FF;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Professional Purple</div>
+                        <div class="color-hex">#6C63FF</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #FF6B35;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Alert Orange</div>
+                        <div class="color-hex">#FF6B35</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #00B894;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Success Green</div>
+                        <div class="color-hex">#00B894</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gradients Section -->
+    <div class="section" style="background: var(--color-light-bg);">
+        <div class="container">
+            <h2 class="section-title">Modern Gradients</h2>
+            <div class="gradient-showcase" style="background: var(--gradient-hero);">
+                Hero Gradient
+            </div>
+            <div class="gradient-showcase" style="background: var(--gradient-roi);">
+                ROI Gradient
+            </div>
+            <div class="gradient-showcase" style="background: var(--gradient-accent);">
+                Accent Gradient
+            </div>
+        </div>
+    </div>
+
+    <!-- Components Section -->
+    <div class="section">
+        <div class="container">
+            <h2 class="section-title">Modern Components</h2>
+            
+            <h3 style="font-size: 24px; margin-bottom: 24px; color: var(--color-deep-navy);">Buttons</h3>
+            <div class="component-group" style="margin-bottom: 40px;">
+                <button class="cta-button">Primary Button</button>
+                <button class="cta-button-secondary">Secondary Button</button>
+                <button class="cta-button-tertiary">Tertiary Button</button>
+                <button class="btn-purple">Purple Accent</button>
+            </div>
+            
+            <h3 style="font-size: 24px; margin-bottom: 24px; color: var(--color-deep-navy);">Badges</h3>
+            <div class="component-group" style="margin-bottom: 40px;">
+                <span class="badge badge-teal">NEW</span>
+                <span class="badge badge-purple">PREMIUM</span>
+                <span class="badge badge-success">ACTIVE</span>
+                <span class="badge badge-alert">HOT</span>
+            </div>
+            
+            <h3 style="font-size: 24px; margin-bottom: 24px; color: var(--color-deep-navy);">Cards</h3>
+            <div class="card-examples">
+                <div class="sample-card">
+                    <div class="icon-box">📊</div>
+                    <h4 style="font-size: 20px; font-weight: 600; margin-bottom: 12px; color: var(--color-deep-navy);">
+                        Feature Card
+                    </h4>
+                    <p style="color: var(--color-medium-gray);">
+                        Modern card design with rounded corners, subtle shadows, and smooth hover effects.
+                    </p>
+                </div>
+                <div class="sample-card">
+                    <div class="icon-box" style="background: rgba(108, 99, 255, 0.1); color: var(--color-professional-purple);">⚡</div>
+                    <h4 style="font-size: 20px; font-weight: 600; margin-bottom: 12px; color: var(--color-deep-navy);">
+                        Purple Accent
+                    </h4>
+                    <p style="color: var(--color-medium-gray);">
+                        Alternative color scheme for premium features and special offerings.
+                    </p>
+                </div>
+                <div class="sample-card">
+                    <div class="icon-box" style="background: rgba(0, 184, 148, 0.1); color: var(--color-success-green);">✓</div>
+                    <h4 style="font-size: 20px; font-weight: 600; margin-bottom: 12px; color: var(--color-deep-navy);">
+                        Success State
+                    </h4>
+                    <p style="color: var(--color-medium-gray);">
+                        Clear visual feedback with appropriate color coding for different states.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Before/After Comparison -->
+    <div class="section" style="background: var(--color-light-bg);">
+        <div class="container">
+            <h2 class="section-title">Design Evolution</h2>
+            <div class="comparison">
+                <div class="comparison-side old-design">
+                    <h3 class="comparison-title" style="color: #1a1a2e;">Previous Design</h3>
+                    <ul class="feature-list" style="margin-bottom: 24px;">
+                        <li style="color: #555555;">Dark navy (#1a1a2e)</li>
+                        <li style="color: #555555;">Bright teal (#16c79a)</li>
+                        <li style="color: #555555;">Fully rounded buttons (50px)</li>
+                        <li style="color: #555555;">Basic card styling</li>
+                        <li style="color: #555555;">Simple shadows</li>
+                    </ul>
+                    <button class="old-button">Old Button Style</button>
+                </div>
+                <div class="comparison-side new-design">
+                    <h3 class="comparison-title" style="color: var(--color-deep-navy);">Modern Design v4.0</h3>
+                    <ul class="feature-list" style="margin-bottom: 24px;">
+                        <li>Deep navy (#0B1F3F) - More professional</li>
+                        <li>Modern teal (#00A99D) - Better contrast</li>
+                        <li>Rounded corners (8-16px) - Contemporary</li>
+                        <li>Enhanced card design with hover effects</li>
+                        <li>Layered shadow system</li>
+                        <li>Purple accent for premium features</li>
+                        <li>CSS variable system</li>
+                    </ul>
+                    <button class="cta-button">New Button Style</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="modern-footer">
+        <div class="container">
+            <div style="text-align: center; padding: 40px 0;">
+                <h3 style="color: white; font-size: 24px; margin-bottom: 16px;">
+                    Modern SaaS Design System v4.0
+                </h3>
+                <p style="color: var(--color-light-text); max-width: 600px; margin: 0 auto;">
+                    Inspired by leading SaaS platforms like sage.com, xentral.com, and dbfakt.de
+                </p>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 WP Elementor Theme - Modern SaaS Design</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
