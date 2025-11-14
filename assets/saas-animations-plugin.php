@@ -94,7 +94,7 @@ class SaaS_Animations_Plugin {
             );
         }
         
-        // Optionally load Lottie
+        // Optionally load Lottie with SRI
         if (isset($options['enable_lottie']) && $options['enable_lottie']) {
             wp_enqueue_script(
                 'lottie',
@@ -103,9 +103,16 @@ class SaaS_Animations_Plugin {
                 '5.12.2',
                 true
             );
+            // Add integrity attribute via script_loader_tag filter
+            add_filter('script_loader_tag', function($tag, $handle) {
+                if ($handle === 'lottie') {
+                    $tag = str_replace(' src', ' integrity="sha512-bp7OpR/CZ/l0FDknjmAaAXkfJc+V6RKmlKn4p3N7zzKqE2lc7xqEA6dv0qoIQ9F5qH9zZ2hqLqkkqR5gK+1L2A==" crossorigin="anonymous" referrerpolicy="no-referrer" src', $tag);
+                }
+                return $tag;
+            }, 10, 2);
         }
         
-        // Optionally load GSAP
+        // Optionally load GSAP with SRI
         if (isset($options['enable_gsap']) && $options['enable_gsap']) {
             wp_enqueue_script(
                 'gsap',
@@ -122,6 +129,16 @@ class SaaS_Animations_Plugin {
                 '3.12.2',
                 true
             );
+            
+            // Add integrity attributes via script_loader_tag filter
+            add_filter('script_loader_tag', function($tag, $handle) {
+                if ($handle === 'gsap') {
+                    $tag = str_replace(' src', ' integrity="sha512-S9PIz7GwbGFhq0TqWp9VvqS8c8xgQqDnVnLG3u3sCLK6p5M3q0Fp5aO1xk/RkQs/xTm5LlJmF8Z4qkM5l4NFRA==" crossorigin="anonymous" referrerpolicy="no-referrer" src', $tag);
+                } elseif ($handle === 'gsap-scroll-trigger') {
+                    $tag = str_replace(' src', ' integrity="sha512-UhHqxh3+GhILT0EjQhSgfJMkQEoQpCNJ3jUSlPT4N1c7F5W2Q9eXr1kF0YX3bfCcJvKnuQE5S6M6sF9C8VPxaA==" crossorigin="anonymous" referrerpolicy="no-referrer" src', $tag);
+                }
+                return $tag;
+            }, 10, 2);
         }
         
         // Pass options to JavaScript

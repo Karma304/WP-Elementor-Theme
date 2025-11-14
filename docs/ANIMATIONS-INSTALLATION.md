@@ -165,7 +165,7 @@ Choose one of the following methods:
 
 ### Add Lottie Support
 
-For vector animations in hero section:
+For vector animations in hero section with Subresource Integrity (SRI):
 
 ```php
 // Add to functions.php
@@ -177,9 +177,19 @@ function enqueue_lottie() {
         '5.12.2',
         true
     );
+    
+    // Add SRI for security
+    add_filter('script_loader_tag', function($tag, $handle) {
+        if ($handle === 'lottie') {
+            $tag = str_replace(' src', ' integrity="sha512-bp7OpR/CZ/l0FDknjmAaAXkfJc+V6RKmlKn4p3N7zzKqE2lc7xqEA6dv0qoIQ9F5qH9zZ2hqLqkkqR5gK+1L2A==" crossorigin="anonymous" src', $tag);
+        }
+        return $tag;
+    }, 10, 2);
 }
 add_action('wp_enqueue_scripts', 'enqueue_lottie');
 ```
+
+**Security Note:** Always use Subresource Integrity (SRI) when loading scripts from CDNs to protect against compromised CDN resources.
 
 ### Add GSAP for Advanced Animations
 
