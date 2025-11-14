@@ -1,65 +1,79 @@
-# Design System - MoinLog WMS SaaS Landing Page
+# Design System - MoinLog WMS SaaS Landing Page (v3.0)
 
 Dieses Dokument beschreibt das vollständige Design-System des Templates für konsistente Anpassungen und Erweiterungen.
 
+**Version 3.0** - Neues minimalistisches, conversion-fokussiertes Design
+
 ## Farbpalette
 
-### Modern SaaS Color Palette (Inspired by sage.com, xentral.com, dbfakt.de)
+### MoinLog WMS Color Palette - Minimalistisch & Modern
 
 ### Primärfarben
 
 | Farbe | Hex-Code | RGB | Verwendung |
 |-------|----------|-----|------------|
-| **Deep Navy** | `#0B1F3F` | rgb(11, 31, 63) | Primary headings, nav text, footer background |
-| **Professional Blue** | `#1B4F72` | rgb(27, 79, 114) | Secondary headings, gradient base |
-| **Modern Teal** | `#00A99D` | rgb(0, 169, 157) | Primary CTAs, icons, brand accent |
-| **Vibrant Cyan** | `#00D4C9` | rgb(0, 212, 201) | Highlights, hover states, interactive elements |
+| **Primary Purple-Blue** | `#667eea` | rgb(102, 126, 234) | Primary CTAs, brand color, buttons, links |
+| **Secondary Purple** | `#764ba2` | rgb(118, 75, 162) | Secondary accents, gradients, highlights |
+| **Accent Green** | `#10b981` | rgb(16, 185, 129) | Success states, checkmarks, positive indicators |
 
-### Sekundärfarben
+### Unterstützende Farben
 
 | Farbe | Hex-Code | RGB | Verwendung |
 |-------|----------|-----|------------|
-| **Deep Teal** | `#008C82` | rgb(0, 140, 130) | CTA hover states, active states |
-| **Professional Purple** | `#6C63FF` | rgb(108, 99, 255) | Secondary CTAs, badges, premium features |
-| **Alert Orange** | `#FF6B35` | rgb(255, 107, 53) | Warning states, attention-grabbers |
-| **Success Green** | `#00B894` | rgb(0, 184, 148) | Success messages, positive indicators |
+| **Error Red** | `#ef4444` | rgb(239, 68, 68) | Error states, pain points, warnings |
+| **Warning Orange** | `#f59e0b` | rgb(245, 158, 11) | Warning states, attention elements |
+| **Text Primary** | `#1a1a1a` | rgb(26, 26, 26) | Headlines, primary text, body |
+| **Text Secondary** | `#6c757d` | rgb(108, 117, 125) | Secondary text, descriptions, captions |
 
 ### Neutral-Farben
 
 | Farbe | Hex-Code | RGB | Verwendung |
 |-------|----------|-----|------------|
-| **Pure White** | `#FFFFFF` | rgb(255, 255, 255) | Main background, card backgrounds |
-| **Light Background** | `#F7F9FC` | rgb(247, 249, 252) | Alternating sections, subtle backgrounds |
-| **Soft Gray** | `#E8ECF1` | rgb(232, 236, 241) | Borders, dividers, disabled states |
-| **Medium Gray** | `#6C757D` | rgb(108, 117, 125) | Secondary text, descriptions |
-| **Dark Text** | `#2C3E50` | rgb(44, 62, 80) | Body text, readable content |
-| **Light Text** | `#95A5A6` | rgb(149, 165, 166) | Captions, metadata, footer text |
+| **Pure White** | `#ffffff` | rgb(255, 255, 255) | Main background, card backgrounds |
+| **Light Background** | `#f8f9fa` | rgb(248, 249, 250) | Alternating sections, subtle backgrounds |
+| **Gray Background** | `#e9ecef` | rgb(233, 236, 239) | Secondary backgrounds |
+| **Border** | `#dee2e6` | rgb(222, 226, 230) | Borders, dividers |
+| **Border Light** | `#e5e7eb` | rgb(229, 231, 235) | Subtle borders |
+| **Text Light** | `#9ca3af` | rgb(156, 163, 175) | Captions, metadata, footer text |
 
 ### Gradient-Definitionen
 
-**Hero-Gradient (Modern Professional)**:
+**Primary Gradient (Purple-Blue)**:
 ```css
-background: linear-gradient(135deg, #0B1F3F 0%, #1B4F72 50%, #2E86AB 100%);
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+/* Verwendung: Primary CTAs, Buttons, Highlights */
 ```
 
-**ROI-Gradient (Vibrant Teal)**:
+**Hero-Gradient (Light & Subtle)**:
 ```css
-background: linear-gradient(90deg, #00A99D 0%, #00D4C9 100%);
+background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+/* Verwendung: Hero Section Background */
 ```
 
-**CTA-Gradient (Deep Professional)**:
+**Dark Gradient (Pre-Footer & ROI)**:
 ```css
-background: linear-gradient(135deg, #1B4F72 0%, #0B1F3F 100%);
+background: linear-gradient(135deg, #1a1a1a 0%, #2d3748 100%);
+/* Verwendung: Dark sections, ROI metrics, Final CTA */
 ```
 
-**Accent-Gradient (Purple Touch)**:
+**Accent-Gradient (Green Success)**:
 ```css
-background: linear-gradient(135deg, #6C63FF 0%, #5A52D5 100%);
+background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+/* Verwendung: Success indicators, positive metrics */
 ```
 
-**Light-Gradient (Soft Background)**:
+**Pain Points Gradient (Red Tint)**:
 ```css
-background: linear-gradient(180deg, #FFFFFF 0%, #F7F9FC 100%);
+background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+/* Verwendung: Pain Points Section */
+```
+
+**Glassmorphism Background**:
+```css
+background: rgba(255, 255, 255, 0.9);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+/* Verwendung: Sticky Header, Glass Cards */
 ```
 
 ## Typografie
@@ -149,85 +163,88 @@ font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, san
 
 ### Buttons
 
-#### Primärer Button (Modern SaaS Style)
+#### Primärer Button (Gradient Style - MoinLog WMS)
 
 **Style**:
-```
-Background: #00A99D (Modern Teal)
+```css
+Background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)
 Text Color: #FFFFFF
-Font Family: Inter / Poppins
+Font Family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif
 Font Size: 16px
 Font Weight: 600
-Padding: 14px 32px
-Border Radius: 8px (Modern rounded)
+Padding: 16px 32px
+Border Radius: 10px
 Border: none
-Box Shadow: 0 2px 8px rgba(0, 169, 157, 0.2)
-Transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+Box Shadow: 0 4px 15px rgba(102, 126, 234, 0.3)
+Transition: all 0.3s ease
 ```
 
 **Hover**:
-```
-Background: #008C82 (Deep Teal)
+```css
 Transform: translateY(-2px)
-Box Shadow: 0 4px 16px rgba(0, 169, 157, 0.35)
+Box Shadow: 0 8px 25px rgba(102, 126, 234, 0.4)
 ```
 
 **Active**:
-```
+```css
 Transform: translateY(0)
-Box Shadow: 0 1px 4px rgba(0, 169, 157, 0.3)
+Box Shadow: 0 4px 15px rgba(102, 126, 234, 0.3)
 ```
 
 **Disabled**:
-```
-Background: #E8ECF1
-Color: #95A5A6
+```css
+Background: #e9ecef
+Color: #9ca3af
 Cursor: not-allowed
 Box Shadow: none
+Opacity: 0.6
 ```
 
-#### Sekundärer Button (Outlined Style)
+#### Sekundärer Button (Ghost/Outlined Style)
 
 **Style**:
-```
+```css
 Background: transparent
-Text Color: #00A99D (on light) / #FFFFFF (on dark)
-Border: 2px solid #00A99D
-Font Family: Inter / Poppins
+Text Color: #667eea (on light) / #FFFFFF (on dark)
+Border: 2px solid #667eea (on light) / 2px solid #FFFFFF (on dark)
+Font Family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif
 Font Size: 16px
 Font Weight: 600
-Padding: 12px 32px
-Border Radius: 8px
-Transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+Padding: 14px 32px
+Border Radius: 10px
+Transition: all 0.3s ease
 ```
 
 **Hover**:
-```
-Background: #00A99D
-Text Color: #FFFFFF
-Border-Color: #00A99D
+```css
+Background: rgba(102, 126, 234, 0.1) (on light) / rgba(255, 255, 255, 0.1) (on dark)
+Text Color: #667eea (on light) / #FFFFFF (on dark)
+Border-Color: #667eea (on light) / #FFFFFF (on dark)
 Transform: translateY(-2px)
-Box Shadow: 0 4px 16px rgba(0, 169, 157, 0.25)
+Box Shadow: 0 4px 15px rgba(102, 126, 234, 0.2)
 ```
 
-#### Tertiary Button (Ghost Style)
+#### Accent Button (Green/Success Style)
 
 **Style**:
-```
-Background: rgba(0, 169, 157, 0.1)
-Text Color: #00A99D
-Border: none
-Font Family: Inter / Poppins
+```css
+Background: #10b981
+Text Color: #FFFFFF
+Font Family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif
 Font Size: 16px
 Font Weight: 600
-Padding: 12px 28px
-Border Radius: 8px
+Padding: 16px 32px
+Border Radius: 10px
+Border: none
+Box Shadow: 0 4px 15px rgba(16, 185, 129, 0.3)
+Transition: all 0.3s ease
 ```
 
 **Hover**:
-```
-Background: rgba(0, 169, 157, 0.15)
-Transform: translateY(-1px)
+```css
+Background: #059669
+Transform: translateY(-2px)
+Box Shadow: 0 8px 25px rgba(16, 185, 129, 0.4)
 ```
 
 ### Icon-Boxen (Modern Card Style)
